@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="https://fonts.googleapis.com/css?family=Share|Unica+One|Open+Sans|Sunflower:300" rel="stylesheet">
+<link rel="icon" href="images/birb.gif">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<title>Flappy Choy | An Intro</title>
+</head>
+
+<style>
+
+h1 {
+
+	font-family: 'IBM Plex Mono', monospace;
+	padding: 1em;
+	background-color: #131E36;
+	color:white;
+	width:inherit;
+
+	}
+
+h2 {
+
+	background-color: rgba(227, 231, 232, 0.65);
+	color:#393939;
+	font-family: 'Unica One', cursive;
+	font-size:50px;
+	position: relative;
+	padding-right:1em;
+	padding-left:1em;
+	padding-top:0em;
+	padding-bottom:1em;
+	margin-bottom:1em;
+	margin-top:1em;
+	margin-right: 30%;
+	margin-left:30%;
+	text-align:center;
+	text-emphasis:none;
+	border-radius:35px;
+	position:30% 30%;
+
+
+}
+
+
+/* Standard syntax */
+
+#story {
+	margin-right:30%;
+	margin-left:30%;
+	border-radius:35px;
+	background-color: rgba(227, 231, 232, 0.70);
+	font-family: 'Unica One', cursive;
+	width:40%;
+	height:auto;
+	padding:1.8em;
+	font-size:24px;
+
+
+}
+
+
+button {
+
+	font-family: 'Unica One', cursive;
+	font-size:24px;
+	border-radius: 20px;
+	width:80px;
+	background-color:rgb(221, 234, 255, 0.8);
+	transition: all .2s ease-in-out;
+
+
+}
+
+
+div {
+	position: relative;
+    -webkit-animation-name: shifting; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: shifting;
+    animation: shifting 0.5s infinite;
+}
+
+@keyframes shifting {
+    0%   {top:0px;}
+    50%  {top:40px;}
+
+    100% {top:0px;}
+}
+
+@-webkit-keyframes shifting {
+	0%   {top:0px;}
+	50%  {top:40px;}
+	100% {top:0px;}
+
+}
+
+button:hover {
+	transform: scale(0.8);
+
+}
+
+p {
+
+	text-align:center;
+
+}
+
+#story {
+	font-family: 'Sunflower', sans-serif;
+}
+
+body {
+
+	background-image: url("http://orig06.deviantart.net/a82d/f/2014/074/9/4/6_2_by_prusakov-d7a9xj1.jpg");
+	background-size:auto;
+	background-repeat:no-repeat;
+	text-align:center;
+
+}
+
+table {
+	width:20%;
+	margin-left: 40%;
+	margin-right:40%;
+	border-radius: 10px;
+
+
+}
+
+td {
+	text-align: center;
+}
+
+
+</style>
+
+<script>
+
+function play() {
+	window.location.href = "gamepage.html";
+}
+
+function shame() {
+	window.location.href = "https://www.youtube.com/watch?annotation_id=annotation_328007&feature=iv&src_vid=X-6V0Wg0aOI&v=T9m6-FnbU2Q";
+	//window.location.href = "https://www.youtube.com/watch?v=5eNFgN7hMWs";
+}
+
+function next1() {
+	document.getElementById("story").innerHTML = "";
+	// cose keeps skipping past this so we'll be repeating it again.
+	document.getElementById("story").innerHTML = "Choy is looking for an adventure, but he needs a partner to look out for him.<br>";
+	document.getElementById("nextBtn").innerHTML = "";
+	var btn = document.createElement("BUTTON");
+  var t = document.createTextNode("→");
+  btn.appendChild(t);
+  document.getElementById("nextBtn").appendChild(btn);
+	document.getElementById("nextBtn").addEventListener("click", next2);
+
+
+}
+
+function next2() {
+	document.getElementById("story").innerHTML = "Choy is looking for an adventure, but he needs a partner to look out for him."
+	document.getElementById("nextBtn").innerHTML = "";
+	var btn = document.createElement("BUTTON");
+  var t = document.createTextNode("→");
+  btn.appendChild(t);
+  document.getElementById("nextBtn").appendChild(btn);
+	document.getElementById("nextBtn").addEventListener("click", next3);
+
+}
+
+function next3() {
+	document.getElementById("story").innerHTML = "He's visually impaired... so you'll need to lead the way and stop him from hitting things or getting eaten."
+	document.getElementById("nextBtn").innerHTML = "";
+	var btn = document.createElement("BUTTON");
+  var t = document.createTextNode("→");
+  btn.appendChild(t);
+  document.getElementById("nextBtn").appendChild(btn);
+	document.getElementById("nextBtn").addEventListener("click", next4);
+
+}
+
+function next4() {
+	document.getElementById("story").innerHTML = "Press any key to jump up, otherwise you'll fall down. Keep Choy an alive and happy bird."
+	document.getElementById("nextBtn").innerHTML = "";
+	var btn = document.createElement("BUTTON");
+  var t = document.createTextNode("→");
+  btn.appendChild(t);
+  document.getElementById("nextBtn").appendChild(btn);
+	document.getElementById("nextBtn").addEventListener("click", next5);
+}
+
+function next5() {
+	document.getElementById("story").innerHTML = "So... Do you accept this mission?"
+	document.getElementById("nextBtn").innerHTML = "";
+	var btn = document.createElement("BUTTON");
+  var t = document.createTextNode("→");
+  btn.appendChild(t);
+  document.getElementById("nextBtn").appendChild(btn);
+	document.getElementById("nextBtn").addEventListener("click", next6);
+}
+
+function next6() {
+
+	document.getElementById("story").innerHTML = "";
+	var yes = document.createElement("BUTTON");
+	var yesT = document.createTextNode("YAH");
+	yes.appendChild(yesT);
+	document.getElementById("yah").appendChild(yes);
+	document.getElementById("yah").addEventListener("click", play);
+	var no = document.createElement("BUTTON");
+	var noT= document.createTextNode("NAH");
+	no.appendChild(noT);
+	document.getElementById("nah").appendChild(no);
+	document.getElementById("nah").addEventListener("click", shame);
+
+	document.getElementById("story").remove();
+	document.getElementById("nextBtn").remove();
+}
+
+
+</script>
+<!--<button id ="next2" onclick="next2()"> <img src="https://cdn2.iconfinder.com/data/icons/media-and-navigation-buttons-round/512/Button_1-512.png" style="opacity:0.55;width:30%;height:35%;"/> </button>
+<button id ="next3" onclick="next3()"> <img src="https://cdn2.iconfinder.com/data/icons/media-and-navigation-buttons-round/512/Button_1-512.png" style="opacity:0.55;width:30%;height:35%;"/> </button>
+<button id ="next4" onclick="next4()"> <img src="https://cdn2.iconfinder.com/data/icons/media-and-navigation-buttons-round/512/Button_1-512.png" style="opacity:0.55;width:30%;height:35%;"/> </button>
+<body>-->
+<body id="body">
+    <h2 id= "subtitle" class="w3-container w3-center w3-animate-zoom" style="padding-top:1em; padding-right:1em; padding-left:1em; padding-bottom:1em;"> Flappy Choy </h2>
+
+
+  <div>
+    <img class="w3-container w3-center w3-animate-zoom" src="images/birb.gif" style="width:18%;height:18%;">
+	</div>
+<br><br>
+    <p class="w3-container w3-center w3-animate-zoom" id="story">
+    Welcome! This is Choy. &nbsp;
+		</p>
+
+			<table id="response">
+				<td id="yah">
+				</td>
+				<td id="nah">
+				</td>
+			</table>
+
+
+    <p id="nextBtn">
+     <button id ="nextone" onclick="next1()"> → </button>
+     <br />
+
+
+
+
+     </p>
+<footer>
+	<br>
+	<audio controls autoplay loop>
+	 <source src="sounds/Kirbys Dream Course - Kirbys Dream Course.mp3" type="audio/mpeg">
+ </audio>
+</footer>
+
+
+</body>
+</html>

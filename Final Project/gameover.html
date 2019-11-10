@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="https://fonts.googleapis.com/css?family=Share|Unica+One|Open+Sans" rel="stylesheet">
+<link rel="icon" href="images/birb.gif">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<title> Flappy Choy </title>
+</head>
+
+<style>
+
+#title {
+	position: relative;
+    -webkit-animation-name: shifting; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: shifting;
+    animation: shifting 0.5s infinite;
+}
+
+@keyframes shifting {
+    0%   {top:0px;}
+    50%  {top:40px;}
+
+    100% {top:0px;}
+}
+
+@-webkit-keyframes shifting {
+	0%   {top:0px;}
+	50%  {top:40px;}
+
+	100% {top:0px;}
+}
+
+h1 {
+
+	font-family: 'IBM Plex Mono', monospace;
+	padding: 1em;
+	background-color: #131E36;
+	color:white;
+	width:inherit;
+
+	}
+
+h2 {
+
+	background-color: rgba(227, 231, 232, 0.65);
+	font-family: 'Unica One', cursive;
+	font-size:50px;
+	position: relative;
+	padding-right:1em;
+	padding-left:1em;
+	padding-top:1em;
+	padding-bottom:1em;
+	margin-bottom:1em;
+	margin-top:1em;
+	margin-right: 30%;
+	margin-left:30%;
+	text-align:center;
+	border-radius:35px;
+	position:30% 30%;
+
+
+}
+
+
+/* Standard syntax */
+
+footer {
+	margin-top: 5em;
+  margin-bottom: 2em;
+	background-color:none;
+	font-family: 'Unica One', cursive;
+	position: relative;
+	text-align:center;
+	border-radius:20px;
+	position:30% 30%;
+
+}
+
+
+button {
+
+	margin:1em;
+	width:10em;
+	height:6em;
+	font-family: 'Unica One', cursive;
+	font-size:24px;
+	border-radius: 20px;
+	background-color:rgba(221, 234, 255, 0.8);
+	transition: all .2s ease-in-out;
+}
+
+h3 {
+	font-family: 'Unica One', cursive;
+	border-radius: 20px;
+	width:15%;
+	padding-top: 0em;
+	padding-bottom:  0em;
+	text-align: center;
+	margin-left: 42.5%;
+	margin-right: 42.5%;
+	background-color:rgba(221, 234, 255, 0.8);
+
+
+}
+
+
+button:hover {
+	transform: scale(0.9);
+	background-color:rgba(183, 183, 183, 0.8);
+	font-size:18px;
+
+
+
+}
+
+ h4 {
+
+  border-radius: 20px;
+  background-color:rgba(221, 234, 255, 0.8);
+  padding:1em;
+	text-align:center;
+  margin-right: 35%;
+	margin-left:35%;
+
+}
+
+#bubbleback {
+  border-radius: 20px;
+  background-color:rgba(221, 234, 255, 0.8);
+  margin-right: 35%;
+  margin-left:35%;
+  padding:3em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+
+	background-image: url("http://orig06.deviantart.net/a82d/f/2014/074/9/4/6_2_by_prusakov-d7a9xj1.jpg");
+	background-size:cover;
+  background-repeat: no-repeat;
+	text-align:center;
+
+}
+
+table {
+	text-align: left;
+	border-radius: 30px;
+	background-color: rgba(227, 231, 232, 0.65);
+	width: 40%;
+	margin-left: 30%;
+	margin-left:30%;
+	font-family: 'Unica One', cursive;
+	font-size: 24px;
+}
+
+button.forgiveness {
+	border: black, 1px;
+	width: 5em;
+	height: 3em;
+	font-size: 18px;
+	background-color: rgba(0,0,0,0.05);
+	transition: all .2s ease-in-out;
+}
+
+.forgiveness:hover {
+	transform: scale(0.8);
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+#feedback {
+
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	background-color: rgba(227, 231, 232, 0.65);
+}
+
+</style>
+
+<script>
+function play() {
+	window.location.href = "gamepage.html";
+}
+
+function story() {
+	window.location.href = "introduction.html";
+}
+
+function next() {
+	document.getElementById("aftermath").innerHTML = "";
+	document.getElementById("aftermath").innerHTML = "Lucky for you... Choy is also very forgiving.";
+}
+</script>
+<body>
+  <h2>GAME OVER!</h2>
+
+
+
+
+    <table  class="w3-container w3-center w3-animate-zoom">
+			<td>
+				<img src="images/birb.gif" id="title" style="width:150px;height:150px;">
+			</td>
+			<td id="aftermath">
+				Choy feels <i>immensely</i> &nbsp;betrayed.
+				<br>
+				You let him get hurt. 	<button id ="forgiveness" class="forgiveness" onclick="next()"> &rarr; </button>
+			</td>
+		</table>
+
+<br>
+<br>
+    	<button id ="Intro" onclick="story()"  class="w3-container w3-center w3-animate-zoom"> Reread Choy's Story </button>
+      <button id = "playAgain" onClick="play()"  class="w3-container w3-center w3-animate-zoom"> Play Again </button>
+
+
+<br>
+<br>
+  <audio controls autoplay loop>
+  <source src="sounds/Super Mario - Game Over.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+</audio>
+
+
+<footer>
+	<h3  id="feedback" class="w3-container w3-center w3-animate-zoom"> <a href="feedback.html" > SEND US FEEDBACK!</a> </h3>
+</footer>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="https://fonts.googleapis.com/css?family=Share|Unica+One|Open+Sans" rel="stylesheet">
+<link rel="icon" href="images/birb.gif">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<title> Flappy Choy </title>
+</head>
+
+<style>
+
+#title {
+	position: relative;
+    -webkit-animation-name: shifting; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: shifting;
+    animation: shifting 0.5s infinite;
+}
+
+@keyframes shifting {
+    0%   {top:0px;}
+    50%  {top:40px;}
+
+    100% {top:0px;}
+}
+
+@-webkit-keyframes shifting {
+	0%   {top:0px;}
+	50%  {top:40px;}
+	100% {top:0px;}
+}
+
+h1 {
+
+	font-family: 'IBM Plex Mono', monospace;
+	padding: 1em;
+	background-color: #131E36;
+	color:white;
+	width:inherit;
+
+	}
+
+h2 {
+
+	background-color: rgba(227, 231, 232, 0.65);
+	font-family: 'Unica One', cursive;
+	font-size:50px;
+	position: relative;
+	padding-right:1em;
+	padding-left:1em;
+	padding-top:1em;
+	padding-bottom:1em;
+	margin-bottom:1em;
+	margin-top:1.5em;
+	margin-right: 30%;
+	margin-left:30%;
+	text-align:center;
+	border-radius:35px;
+	position:30% 30%;
+
+
+}
+
+
+/* Standard syntax */
+
+footer {
+	margin-top: 5em;
+	background-color:none;
+	font-family: 'Unica One', cursive;
+	position: relative;
+	text-align:center;
+	border-radius:20px;
+	position:30% 30%;
+
+}
+
+audio {
+	margin-top: 3em;
+	height: 0%;
+	width: 0%;
+}
+
+input {
+
+	margin:1em;
+
+	height:2em;
+	font-family: 'Open Sans', sans-serif;
+	font-size:18px;
+	border-radius: 20px;
+	background-color:rgba(221, 234, 255, 0.8);
+	-webkit-animation-name: shrink; /* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+	animation-name: shrink;
+	animation-duration: 1.5s;
+	-webkit-animation-name: grow; /* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+	animation-name: grow;
+	animation-duration: 1.5s;
+	font-weight: 90%;
+	color: rgba(0, 0, 0, 1);
+
+}
+
+form {
+	font-family: 'Unica One', cursive;
+	font-size: 24px;
+
+}
+
+
+@keyframes shrink {
+
+    	from {
+			width:7em;
+			height:3em;
+			}
+		to {
+			width:6em;
+			height:2em;
+			}
+
+}
+
+audio {
+	width:15em;
+	height:2em;
+
+}
+
+
+button {
+	width:5em;
+	height:3em;
+	transition: all .2s ease-in-out;
+	border-radius: 20px;
+	margin-left: 25%;
+	background-color:rgba(221, 234, 255, 0.8);
+	font-family:'Unica One', cursive;
+	font-size:18px;
+}
+
+button:hover {
+
+	background-color:rgba(183, 183, 183, 0.8);
+	transform: scale(0.9);
+
+}
+
+
+
+body {
+
+	background-image: url("http://orig06.deviantart.net/a82d/f/2014/074/9/4/6_2_by_prusakov-d7a9xj1.jpg");
+	background-size:auto;
+	background-repeat:no-repeat;
+	text-align:center;
+
+}
+
+#submission {
+	text-align: left;
+	margin-top: 6em;
+	padding-left: 15em;
+	margin-right: 30%;
+	margin-left:30%;
+	width: 40%;
+	border-radius: 20px;
+	background-color: rgba(227, 231, 232, 0.65);
+	padding-bottom:2em;
+}
+</style>
+
+<script>
+function next() {
+	window.location.href = "feedback2.html";
+}
+
+
+</script>
+<body>
+
+	<div id="title">
+		<h2 id= "subtitle" class="w3-container w3-center w3-animate-zoom" style="padding:1em;"> Feedback for Choy <img src="images/birb.gif" style="width:25%;height:25%;"> </h2>
+	</div id="title">
+<div id="submission">
+
+	<form>
+	  Name:
+	  <input name="firstname" type="text">
+	  <br>
+		Age:
+		<select name="age">
+			<option value="5-9">5-9</option>
+		  <option value="10-13">10-13</option>
+		  <option value="14-17">13-17</option>
+		  <option value="18+">18+</option>
+
+	</select>
+	<br>
+
+	<form>
+		Gender:
+		<br>
+	  <input type="radio" name="gender" value="male" checked> Male<br>
+	  <input type="radio" name="gender" value="female"> Female<br>
+	  <input type="radio" name="gender" value="other"> Other
+	</form>
+<br>
+
+   	<button id ="next" onclick="next()"> Next </button>
+
+</div>
+
+<audio controls autoplay loop>
+	<source src="sounds/Kirbys Dream Course - Kirbys Dream Course.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+</audio>
+
+<footer>
+
+
+</footer>
+</body>
+</html>

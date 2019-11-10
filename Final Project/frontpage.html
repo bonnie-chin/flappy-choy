@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="https://fonts.googleapis.com/css?family=Share|Unica+One" rel="stylesheet">
+<link rel="icon" href="images/birb.gif">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<title> Flappy Choy </title>
+</head>
+
+<style>
+
+#title {
+	position: relative;
+    -webkit-animation-name: shifting; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: shifting;
+    animation: shifting 0.5s infinite;
+}
+
+@keyframes shifting {
+    0%   {top:0px;}
+    50%  {top:40px;}
+
+    100% {top:0px;}
+}
+
+@-webkit-keyframes shifting {
+	0%   {top:0px;}
+	50%  {top:40px;}
+
+	100% {top:0px;}
+}
+
+h1 {
+
+	font-family: 'IBM Plex Mono', monospace;
+	padding: 1em;
+	background-color: #131E36;
+	color:white;
+	width:inherit;
+
+	}
+
+h2 {
+
+	background-color: rgba(227, 231, 232, 0.65);
+	font-family: 'Unica One', cursive;
+	font-size:50px;
+	position: relative;
+	padding-right:1em;
+	padding-left:1em;
+	padding-top:1em;
+	padding-bottom:1em;
+	margin-bottom:1em;
+	margin-top:3em;
+	margin-right: 30%;
+	margin-left:30%;
+	text-align:center;
+	border-radius:35px;
+	position:30% 30%;
+
+
+}
+
+
+/* Standard syntax */
+
+footer {
+	margin-top: 3em;
+	background-color:none;
+	font-family: 'Unica One', cursive;
+	position: relative;
+	text-align:center;
+	border-radius:20px;
+	position:30% 30%;
+
+}
+
+
+button {
+
+	margin:1em;
+	width:8em;
+	height:6em;
+	font-family: 'Unica One', cursive;
+	font-size:24px;
+	border-radius: 20px;
+	background-color:rgba(221, 234, 255, 0.8);
+	-webkit-animation-name: shrink; /* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+	animation-name: shrink;
+	animation-duration: 1.5s;
+	-webkit-animation-name: grow; /* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+	animation-name: grow;
+	animation-duration: 1.5s;
+	font-weight: 90%;
+	color: rgba(0, 0, 0, 1);
+	transition: all .2s ease-in-out;
+
+}
+
+h3 {
+	font-family: 'Unica One', cursive;
+	border-radius: 20px;
+	width:15%;
+	padding-top: 0.6em;
+	padding-bottom:  0.6em;
+	text-align: center;
+	margin-left: 42.5%;
+	margin-right: 42.5%;
+	background-color:rgba(221, 234, 255, 0.8);
+}
+
+@keyframes shrink {
+
+    	from {
+			width:9em;
+			height:7em;
+			}
+		to {
+			width:8em;
+			height:6em;
+			}
+
+}
+
+@keyframes grow {
+
+    	from {
+			width:9em;
+			height:7em;
+			}
+		to {
+			width:8em;
+			height:6em;
+			}
+
+}
+
+button:hover {
+
+	background-color:rgba(183, 183, 183, 0.8);
+	transform: scale(0.9);
+	font-size:22px;
+
+}
+
+p {
+
+	text-align:center;
+
+}
+
+body {
+
+	background-image: url("http://orig06.deviantart.net/a82d/f/2014/074/9/4/6_2_by_prusakov-d7a9xj1.jpg");
+	background-size:auto;
+	background-repeat:no-repeat;
+	text-align:center;
+
+}
+
+</style>
+
+<script>
+function play() {
+	window.location.href = "gamepage.html";
+}
+
+function exit() {
+	window.location.href = "introduction.html";
+}
+
+</script>
+<body>
+
+	<div id="title">
+		<h2 id= "subtitle" class="w3-container w3-center w3-animate-zoom" style="padding:1em;"> Flappy Choy <br><img src="images/birb.gif" style="width:25%;height:25%;"> </h2>
+	</div id="title">
+
+    <p>
+    	<button id ="Intro" onclick="exit()"> Introduction </button>
+        <button id = "playAgain" onClick="play()"> Play </button>
+
+    </p>
+	<audio preload="auto" controls autoplay loop>
+	  <source src="sounds/Kirbys Dream Course - Kirbys Dream Course.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+
+
+<footer>
+
+	<h3> <a href="feedback.html"> SEND US FEEDBACK!</a> </h3>
+</footer>
+</body>
+</html>

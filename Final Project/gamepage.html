@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Share|Unica+One" rel="stylesheet">
+    <link rel="icon" href="images/birb.gif">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Flappy Choy</title>
+  </head>
+
+  <style>
+
+  #title {
+  	position: relative;
+      -webkit-animation-name: shifting; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+      animation-name: shifting;
+      animation: shifting 0.5s infinite;
+  }
+
+  @keyframes shifting {
+      0%   {top:0px;}
+      50%  {top:40px;}
+      100% {top:0px;}
+  }
+
+  @-webkit-keyframes shifting {
+  	0%   {top:0px;}
+  	50%  {top:40px;}
+
+  	100% {top:0px;}
+  }
+
+  h2 {
+
+  	background-color: rgba(227, 231, 232, 0.65);
+  	font-family: 'Unica One', cursive;
+  	font-size:24px;
+    width: 20%;
+  	position: relative;
+  	padding-right:1em;
+  	padding-left:1em;
+  	padding-top:0.5em;
+  	padding-bottom:0.5em;
+  	margin-bottom:1em;
+  	margin-top:4em;
+  	margin-right: 40%;
+  	margin-left:40%;
+  	text-align:center;
+  	border-radius:35px;
+  	position:30% 30%;
+
+
+  }
+
+canvas {
+  margin-left: 15%;
+    margin-top: 5%;
+    border-radius: 20px;
+}
+
+  body {
+    background-image:url("images/lowpolyback.png");
+    background-size:auto;
+    background-size: cover;
+    background-repeat:no-repeat;
+    text-align:center;
+
+
+  }
+
+  audio {
+    margin-left: 70%;
+
+  }
+
+aside {
+  float:right;
+  text-align: left;
+  margin-right: 10%;
+  margin-top:10%;
+
+}
+
+h3 {
+  font-size: 32px;
+  font-family: 'Unica One', cursive;
+}
+
+p {
+  font-size:24px;
+  font-family:'Unica One', cursive;
+}
+
+  </style>
+  <body>
+
+
+   <canvas id="canvas" width="700" height="600" ></canvas>
+
+   <aside>
+     <h3>
+       HIGHSCORE <img src="images/coin.gif"> </img>
+     </h3>
+     <p id="highscore">
+       <h3>
+         SCORE <img src="images/coin.gif"> </img>
+       </h3>
+       <p id="score">
+
+       </p>
+     </p>
+   </aside>
+
+   <script src="flappyBird.js"></script>
+
+   <div id="title">
+     <h2 id= "subtitle" class="w3-container w3-center w3-animate-zoom" style="padding:1em;"> Flappy Choy<img src="images/birb.gif" style="width:15%; height:15%" </h2>
+   </div id="title">
+
+
+   <audio controls autoplay loop>
+     <source src="sounds/gameMusic.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+  </audio>
+  </body>
+</html>
